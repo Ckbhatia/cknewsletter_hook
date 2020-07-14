@@ -1,0 +1,24 @@
+{
+  "name": "cknewsletter_hook",
+  "version": "1.0.0",
+  "description": "cknewsletter hook is a request helper package that makes subscribe and push slug request simple for cknewsletter service user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ckbhatia/cknewsletter_hook.git"
+  },
+  "keywords": [
+    "cknewsletter",
+    "cknewsletter_hook"
+  ],
+  "author": "Chetan Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ckbhatia/cknewsletter_hook/issues"
+  },
+  "homepage": "https://github.com/Ckbhatia/cknewsletter_hook#readme",
+  "dependencies": {}
+}
