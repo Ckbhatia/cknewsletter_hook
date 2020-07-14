@@ -20,5 +20,7 @@
     "url": "https://github.com/Ckbhatia/cknewsletter_hook/issues"
   },
   "homepage": "https://github.com/Ckbhatia/cknewsletter_hook#readme",
-  "dependencies": {}
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }
