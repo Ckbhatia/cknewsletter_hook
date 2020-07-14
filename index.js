@@ -36,4 +36,38 @@ const subscribe = async (email, projectApi) => {
 	}
 };
 
-module.exports = { subscribe };
+/* Makes a PATCH request with given data and return response
+ ** param {string}
+ ** param {string}
+ ** return {object || string}
+ */
+const pushSlug = async (slug, projectApi) => {
+	// Validation
+	if (typeof slug !== "string" && typeof projectApi !== "string") {
+		throw new Error("Both arguments should be typeof string.");
+	} else if (typeof slug !== undefined && typeof projectApi !== undefined) {
+		throw new Error("Both arguments should be passed.");
+	}
+
+	const res = await fetch(
+		"https://cknewsletter.herokuapp.com/api/v1/projects/slug",
+		{
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json;charset=utf-8",
+			},
+			body: JSON.stringify({ slug, apiKey: projectApi }),
+		}
+	);
+
+	// Return response
+	if (res.status === 200) {
+		return res;
+	} else if (res.status === 409) {
+		throw new Error("Already pushed the slug.");
+	} else {
+		throw new Error("There's an error.");
+	}
+};
+
+module.exports = { subscribe, pushSlug };
